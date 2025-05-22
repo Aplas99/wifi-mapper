@@ -5,12 +5,12 @@
   "type": "module",
   "main": "dist-electron/main.js",
   "scripts": {
-    "dev:react": "vite",
-    "dev:electron": "electron .",
+    "dev": "vite",
+    "dev:electron": "NODE_ENV=development electron .",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "transpile:electron": "tsc --project src/electron/tsconfig.json",
+    "tran:electron": "tsc --project src/electron/tsconfig.json",
     "dist:mac": "npm run transpile:electron && npm run build && electron-builder --mac --arm64",
     "dist:win": "npm run transpile:electron && npm run build && electron-builder --win --x64",
     "dist:linux": "npm run transpile:electron && npm run build && electron-builder --linux --x64"
