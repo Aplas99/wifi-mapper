@@ -1,0 +1,24 @@
+// src/electron/tsconfig.json
+{
+  // (optionally extend your base Node config)
+  // "extends": "../../tsconfig.node.json",
+
+  "compilerOptions": {
+    "strict": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "outDir": "../../dist-electron",
+    "skipLibCheck": true,
+    "allowJs": true, // ← include .js files
+    "noEmit": false // ← actually emit to outDir
+  },
+
+  "include": [
+    "**/*.js" // ← grab every JS file in this folder
+  ],
+
+  "exclude": [
+    "node_modules", // ← default exclusion
+    "dist-electron" // ← relative, so it doesn’t accidentally exclude the whole tree
+  ]
+}
