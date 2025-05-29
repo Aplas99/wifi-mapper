@@ -5,8 +5,9 @@
   "type": "module",
   "main": "dist-electron/main.js",
   "scripts": {
-    "dev": "vite",
-    "dev:electron": "NODE_ENV=development electron .",
+    "dev": "bun-run-all --parallel dev:react dev:electron",
+    "dev:react": "vite",
+    "dev:electron": "bun run tran:electron; NODE_ENV=development electron .",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
