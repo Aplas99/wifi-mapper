@@ -14,7 +14,9 @@
   },
 
   "include": [
-    "**/*.js" // ← grab every JS file in this folder
+    "**/*.js/*.ts", // ← grab every JS file in this folder
+    "main.ts",
+    "wifi-mapper.ts"
   ],
 
   "exclude": [
